@@ -622,7 +622,7 @@ def menu(message):
             bot.send_message(message.chat.id, "\n<b>ФИО:</b> " + customer.fio +
                              "\n<b>Дата рождения:</b> " + customer.birthday.strftime('%d.%m.%Y') +
                              "\n<b>Образование:</b> " + customer.education +
-                             "\n<b>Опыт работы:</b> " + customer.experience , parse_mode=telegram.ParseMode.HTML )         
+                             "\n<b>Опыт работы:</b> " + customer.experience , parse_mode='HTML' )         
             dossier(message)
     except Exception as error:
         print("menu ", error)
@@ -723,7 +723,7 @@ def show_vacancy(message):
             for row in results:
                 vacancy_id = row[0]
                 #bot.send_message(message.chat.id,  "<b>Город:</b> " + str(row[2]) + "\n<b>Организация:</b> " + str(row[3]) + "\n<b>Категория:</b> " + str(row[4]) + "\n<b>Позиция:</b> " + str(row[5]) + "\n<b>Подробности:</b> " + str(row[6]) + "\n<b>Зарплата:</b> " + str(row[7]) , parse_mode=telegram.ParseMode.HTML )                
-                bot.send_message(message.chat.id,  "<b>Қала:</b> " + str(row[2]) + "\n<b>Ұйымдастыру:</b> " + str(row[3]) + "\n<b>Санат:</b> " + str(row[4]) + "\n<b>Позиция:</b> " + str(row[5]) + "\n<b>Толығырақ:</b> " + str(row[6]) + "\n<b>Жалақы:</b> " + str(row[7]) , parse_mode=telegram.ParseMode.HTML )                
+                bot.send_message(message.chat.id,  "<b>Қала:</b> " + str(row[2]) + "\n<b>Ұйымдастыру:</b> " + str(row[3]) + "\n<b>Санат:</b> " + str(row[4]) + "\n<b>Позиция:</b> " + str(row[5]) + "\n<b>Толығырақ:</b> " + str(row[6]) + "\n<b>Жалақы:</b> " + str(row[7]) , parse_mode='HTML' )                
             print("vacancy_id ", vacancy_id)               
             # Закрыть объект cursor после завершения работы.
             cursor.close()
@@ -959,7 +959,7 @@ def history(message):
                              "\n<b>Санат:</b> " + str(row[6]) +
                              "\n<b>Лауазымы:</b> " + str(row[7]) +
                              "\n<b>Сипаттама:</b> " + str(row[8]) +
-                             "\n<b>Жалақы:</b> " + str(row[9]) , parse_mode=telegram.ParseMode.HTML )                
+                             "\n<b>Жалақы:</b> " + str(row[9]) , parse_mode='HTML' )                
         # Закрыть объект cursor после завершения работы.
         cursor.close()
         # Закрыть соединение после завершения работы.
