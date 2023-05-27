@@ -23,6 +23,7 @@ import getpass
 #from PIL import Image
 #import cv2 
 #import numpy 
+from telegram.constants import ParseMode
 
 # Указываем токен
 API_TOKEN = '5281292321:AAHcrX098QqGom13KF7-_trKIeXEV6ZSOgQ'
